@@ -1,39 +1,56 @@
 .final {
-    background-color: #007aff;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  .mascota {
-    position: absolute;
-    width: 350px;
-    height: 500px;
-    z-index: 10;
-    left: 77%;
-  }
-  
-  .card2 {
-    width: 90%;
-    height: 100%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: white;
-    text-align: center;
-  }
-  
-  .card2 p {
-    font-size: 14px;
-    color: white;
-  }
+  background-color: #007aff;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.mascota {
+  position: absolute;
+  width: 350px;
+  height: 450px;
+  z-index: 10;
+  left: 77%;
+}
+
+.card2 {
+  width: 90%;
+  height: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card2 p {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.imageContainer {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
   
   .slider {
     width: 100%;
-    height: 350px;
+    height: 300px;
     overflow: hidden;
     mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
     position: relative;
@@ -49,7 +66,7 @@
   
   .slider .list .item {
     width: 250px;
-    height: 300px;
+    height: 250px;
     position: absolute;
     left: 100%;
     animation: autoRun 30s linear infinite;

@@ -1,44 +1,52 @@
 import React from 'react';
 import styles from './FinalSection.module.css';
-import mascotaImage from './Mascota.png'; // Asegúrate de tener la imagen en esta carpeta
+import mascotaImage from './Mascota.png';
+
+// Importa todas las imágenes que necesitarás
+import admisionesImg from './Imagenes/admisiones.png';
+import noticiasImg from './Imagenes/noticias.jpg';
+import eventosImg from './Imagenes/eventos.jpg';
+import calendarioImg from './Imagenes/calendario.jpeg';
+import plataformasImg from './Imagenes/plataforma.png';
+import quienesSomosImg from './Imagenes/quienes.jpg';
 
 const FinalSection = () => {
   const sliderItems = [
     {
       id: 1,
       gradient: "linear-gradient(to right, #ff7e5f, #feb47b)",
-      text1: "HELLO THERE",
-      text2: "Am Ashwin.A"
+      text1: "Quienes Somos",
+      image: quienesSomosImg
     },
     {
       id: 2,
       gradient: "linear-gradient(to right, #6a11cb, #2575fc)",
-      text1: "Do follow on Insta",
-      text2: "ashwin_ambar_"
+      text1: "Admisiones",
+      image: admisionesImg
     },
     {
       id: 3,
       gradient: "linear-gradient(to right, #00c6ff, #0072ff)",
-      text1: "Replace cards with images",
-      text2: "for a image slider"
+      text1: "Noticias",
+      image: noticiasImg
     },
     {
       id: 4,
       gradient: "linear-gradient(to right, #ff512f, #dd2476)",
-      text1: "Html css only",
-      text2: "Hover to stop the slides"
+      text1: "Eventos",
+      image: eventosImg
     },
     {
       id: 5,
       gradient: "linear-gradient(to right, #ffb6c1, #ff69b4)",
-      text1: "Card 5",
-      text2: "Content for card 5"
+      text1: "Calendario",
+      image: calendarioImg
     },
     {
       id: 6,
       gradient: "linear-gradient(to right, #ff9a8b, #ffc3a0)",
-      text1: "Card 6",
-      text2: "Content for card 6"
+      text1: "Plataformas",
+      image: plataformasImg
     }
   ];
 
@@ -58,7 +66,9 @@ const FinalSection = () => {
                 style={{ background: item.gradient }}
               >
                 <p>{item.text1}</p>
-                <p>{item.text2}</p>
+                <div className={styles.imageContainer}>
+                  <img src={item.image} alt={item.text1} className={styles.cardImage} />
+                </div>
               </div>
             </div>
           ))}
