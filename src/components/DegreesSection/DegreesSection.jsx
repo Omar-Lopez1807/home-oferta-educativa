@@ -41,18 +41,12 @@ const DegreesSection = () => {
     },
     {
       id: 7,
-      title: "Ingeniería en Informatica",
-      description: "La carrera de Ingeniería en Gestión Empresarial de nuestro Instituto Tecnológico cuenta con la acreditación ante el Consejo de Acreditación de la Enseñanza de la Ingeniería, A. C., (CACEI)....",
-      bgClass: "bg-informatica"
-    },
-    {
-      id: 8,
       title: "Ingeniería Mecatronica",
       description: "La carrera de Ingeniería en Gestión Empresarial de nuestro Instituto Tecnológico cuenta con la acreditación ante el Consejo de Acreditación de la Enseñanza de la Ingeniería, A. C., (CACEI)....",
       bgClass: "bg-mecatronica"
     },
     {
-      id: 9,
+      id: 8,
       title: "Ingenieria Electromecanica",
       description: "La carrera de Ingeniería en Gestión Empresarial de nuestro Instituto Tecnológico cuenta con la acreditación ante el Consejo de Acreditación de la Enseñanza de la Ingeniería, A. C., (CACEI)....",
       bgClass: "bg-electromecanica"
@@ -63,13 +57,13 @@ const DegreesSection = () => {
   const maestrias = [
     {
       id: 1,
-      title: "Maestría en Ciencias Ambientales",
+      title: "Ciencias Ambientales",
       description: "El Tecnológico de Cancún, como un mecanismo para contribuir con la solución de problemas ambientales y sociales de la región...",
       bgClass: "bg-ambientales"
     },
     {
       id: 2,
-      title: "Maestría en Administración en Negocios",
+      title: "Administración en Negocios",
       description: "Programa diseñado para formar profesionales en el área de administración...",
       bgClass: "bg-negocios"
     },
@@ -78,25 +72,19 @@ const DegreesSection = () => {
   const doctorados = [
     {
       id: 1,
-      title: "Doctorado en Ciencias Ambientales",
+      title: "Ciencias Ambientales",
       description: "El Instituto Tecnológico de Chetumal y el Instituto Tecnológico de Cancún, como un mecanismo para contribuir con la solución de problemas ambientales...",
       bgClass: "bg-doc-ambientales"
     },
     // Agrega más doctorados aquí...
   ];
 
-  const lenguas = [
-    {
-      id: 1,
-      title: "Ingles",
-      description: "Contenido de lenguas...",
-      bgClass: "bg-lenguas"
-    },
-    // Agrega más doctorados aquí...
-  ];
-
   return (
     <>
+      <p className={styles.descripcion}>
+          Explora nuestras Licenciaturas, Ingenierías, Maestrías y Doctorado
+          diseñados para impulsar tu futuro profesional
+      </p>
       {/* Sección de Licenciaturas */}
       <section className={styles.degreesContainer}>
         <h2 className={styles.sectionTitle}>Licenciaturas</h2>
@@ -104,14 +92,15 @@ const DegreesSection = () => {
           {licenciaturas.map(licenciatura => (
             <DegreeCard 
               key={licenciatura.id}
+              programType="licenciatura" // Añade esto
               title={licenciatura.title}
               description={licenciatura.description}
               bgClass={licenciatura.bgClass}
+              id={licenciatura.id} // Añade esta línea
             />
           ))}
         </div>
       </section>
-
 
       {/* Sección combinada Doctorados y Maestrias */}
       <section className={styles.combinedContainer}>
@@ -121,9 +110,11 @@ const DegreesSection = () => {
             {maestrias.map(item => (
               <DegreeCard 
                 key={item.id}
+                programType="maestria" // Añade esto
                 title={item.title}
                 description={item.description}
                 bgClass={item.bgClass}
+                id={item.id} // Añade esta línea
               />
             ))}
           </div>
@@ -135,29 +126,17 @@ const DegreesSection = () => {
             {doctorados.map(item => (
               <DegreeCard 
                 key={item.id}
+                programType="doctorado" // Añade esto
                 title={item.title}
                 description={item.description}
                 bgClass={item.bgClass}
+                id={item.id} // Añade esta línea
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Sección de Lenguas */}
-      <section className={styles.degreesContainer}>
-        <h2 className={styles.sectionTitle}>Lenguas Extranjeras</h2>
-        <div className={styles.cardsContainer}>
-          {lenguas.map(lenguas => (
-            <DegreeCard 
-              key={lenguas.id}
-              title={lenguas.title}
-              description={lenguas.description}
-              bgClass={lenguas.bgClass}
-            />
-          ))}
-        </div>
-      </section>
     </>
   );
 };

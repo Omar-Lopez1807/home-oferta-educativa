@@ -1,18 +1,20 @@
 import styles from './Header.module.css';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
   return (
     <header className={styles.mainHeader}>
       <nav className={styles.mainNav}>
         <ul>
-          <li><a href="#">Instituto ITC</a></li>
-          <li><a href="#">Oferta Educativa</a></li>
-          <li><a href="#">Admisiones</a></li>
-          <li><a href="#">Plataformas</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Eventos</a></li>
-          <li><a href="#">Noticias</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><Link to="/instituto-itc">Instituto ITC</Link></li>
+          <li><Link to="/oferta-educativa">Oferta Educativa</Link></li>
+          <li><Link to="/admisiones">Admisiones</Link></li>
+          <li><Link to="/plataformas">Plataformas</Link></li>
+          <li><Link to="/servicios">Servicios</Link></li>
+          <li><Link to="/eventos">Eventos</Link></li>
+          <li><Link to="/noticias">Noticias</Link></li>
+          <li><Link to="/contacto">Contacto</Link></li>
         </ul>
       </nav>
     </header>

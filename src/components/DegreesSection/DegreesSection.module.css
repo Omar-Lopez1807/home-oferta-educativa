@@ -35,6 +35,12 @@
     border-radius: 10px;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
     cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .cardLink {
+    text-decoration: none;
+    color: inherit;
   }
   
   .content {
@@ -66,15 +72,15 @@
     transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   }
   
-  .bg-sistemas::before { background: linear-gradient(-45deg, #000000 0%, #3498db 100% ); }
-  .bg-civil::before { background: linear-gradient(-45deg, #000000 0%, #f4d03f 100% ); }
-  .bg-administracion::before { background: linear-gradient(-45deg, #000000 0%, #9b59b6 100% ); }
-  .bg-contaduria::before { background: linear-gradient(-45deg, #000000 0%, #16a085 100% ); }
-  .bg-ing-admin::before { background: linear-gradient(-45deg, #000000 0%, #1f3a93 100% ); }
-  .bg-gestion::before { background: linear-gradient(-45deg, #000000 0%, #e67e22 100% ); }
+  .bg-sistemas::before { background: linear-gradient(-45deg, #000000 0%, #eb911e 100% ); }
+  .bg-civil::before { background: linear-gradient(-45deg, #000000 0%, #e7e154 100% ); }
+  .bg-administracion::before { background: linear-gradient(-45deg, #000000 0%, #d48ce9 100% ); }
+  .bg-contaduria::before { background: linear-gradient(-45deg, #000000 0%, #ff9bd9 100% ); }
+  .bg-ing-admin::before { background: linear-gradient(-45deg, #000000 0%, #309cff 100% ); }
+  .bg-gestion::before { background: linear-gradient(-45deg, #000000 0%, #61de52 100% ); }
   .bg-informatica::before { background: linear-gradient(-45deg, #000000 0%, #27ae60 100% ); }
-  .bg-mecatronica::before { background: linear-gradient(-45deg, #000000 0%, #34495e 100% ); }
-  .bg-electromecanica::before { background: linear-gradient(-45deg, #000000 0%, #95a5a6 100% ); }
+  .bg-mecatronica::before { background: linear-gradient(-45deg, #000000 0%, #a7a7a7 100% ); }
+  .bg-electromecanica::before { background: linear-gradient(-45deg, #000000 0%, #ff3030 100% ); }
   .bg-ambientales::before { background: linear-gradient(-45deg, #000000 0%, #06bd00 100% ); }
   .bg-negocios::before { background: linear-gradient(-45deg, #000000 0%, #0780ea 100% ); }
   .bg-doc-ambientales::before { background: linear-gradient(-45deg, #000000 0%, #06bd00 100% ); }
@@ -85,7 +91,8 @@
   }
   
   .card:hover {
-    box-shadow: none;
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   }
   
   .card:hover .content {
@@ -104,6 +111,16 @@
 .halfSection {
   flex: 1;
   min-width: 0; /* Evita problemas de desbordamiento */
+}
+
+.descripcion{
+  padding: 50px;
+    margin: auto;
+    max-width: 700px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 200%;
+    font-weight: 700;
 }
   
   @media (max-width: 1024px) {

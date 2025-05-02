@@ -1,15 +1,16 @@
+import { Link } from 'react-router-dom';
 import { FaHome, FaChevronRight } from 'react-icons/fa';
 import styles from './Breadcrumbs.module.css';
 
-const Breadcrumbs = () => {
+const Breadcrumbs = ({ currentPage }) => {
   return (
     <div className={styles.breadcrumbs}>
       <ul>
         <li>
-          <a href="#"><FaHome /></a>
+          <Link to="/"><FaHome /></Link>
         </li>
         <li><FaChevronRight /></li>
-        <li>Oferta Educativa</li>
+        <li>{currentPage}</li>
       </ul>
     </div>
   );

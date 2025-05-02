@@ -1,13 +1,19 @@
+import { Link } from 'react-router-dom';
 import styles from './DegreesSection.module.css';
+import { createFriendlyUrl } from '../../utils/urlHelper';
 
-const DegreeCard = ({ title, description, bgClass }) => {
+const DegreeCard = ({ id, title, description, bgClass, programType }) => {
+  const friendlyUrl = createFriendlyUrl(title);
+  
   return (
-    <div className={`${styles.card} ${styles[bgClass]}`}>
-      <div className={styles.content}>
-        <p className={styles.heading}>{title}</p>
-        <p className={styles.para}>{description}</p>
+    <Link to={`/${programType}/${friendlyUrl}`} className={styles.cardLink}>
+      <div className={`${styles.card} ${styles[bgClass]}`}>
+        <div className={styles.content}>
+          <p className={styles.heading}>{title}</p>
+          <p className={styles.para}>{description}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
