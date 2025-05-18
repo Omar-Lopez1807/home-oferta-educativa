@@ -15,6 +15,30 @@ const FAQ = () => {
         </ul>`
     },
     // Agrega más FAQs aquí...
+    {
+      id: 2,
+      question: "¿Cuál es el horario de clases?",
+      answer: "El horario puede ser matutino o vespertino, dependiendo de la carrera y semestre."
+    },
+
+    {
+      id: 3,
+      question: "¿El instituto ofrece actividades extracurriculares?",
+      answer: "Sí, hay talleres de música, danza, deportes, clubes estudiantiles, concursos y más."
+    },
+
+    {
+      id: 4,
+      question: "¿Cómo funciona el servicio social?",
+      answer: "Se realiza después de cubrir el 70% de créditos y tiene una duración de 480 horas en instituciones públicas o sociales."
+    },
+
+    {
+      id: 5,
+      question: "¿Qué necesito para titularme?",
+      answer: "Haber aprobado todas las materias, realizar servicio social, residencia profesional, ingles y cumplir con algún proceso de titulación como tesis, informe técnico o promedio general."
+    },
+
   ];
 
   return (
